@@ -23,6 +23,11 @@ describe('SignupComponent', () => {
 
   it('Has title Signup', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Signup');
+    expect(compiled.querySelector('h1')?.textContent).toBe('Signup');
+  });
+
+  it('Has label for Username', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('label')?.textContent).toBe('Username:');
   });
 });
