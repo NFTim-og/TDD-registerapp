@@ -27,13 +27,18 @@ describe('SignupComponent', () => {
   });
 
   it('Has label for Username', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
+    const compiled:HTMLElement = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('label')?.textContent).toBe('Username:');
   });
 
   it('Has label for Email', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('label')?.textContent).toBe('Email:');
+    const compiled:HTMLElement = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelectorAll('label')[1]?.textContent).toBe('Email:');
   });
+
+  it('Has label for Password', () => {
+    const compiled:HTMLElement = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelectorAll('label')[2]?.textContent).toBe('Password:');
+  }); 
 
 });
